@@ -52,7 +52,7 @@ export const MODELS = {
     description: 'Claude 3.7 with enhanced reasoning capabilities'
   },
   'gpt-4.1': { 
-    tier: 'premium', 
+    tier: 'free', 
     priority: 95,
     recommended: false,
     lowQuality: false,
@@ -94,21 +94,21 @@ export const MODELS = {
     description: 'Gemini Flash 2.5 - Google\'s fast, responsive AI model'
   },
   'gpt-4o': { 
-    tier: 'premium', 
+    tier: 'free', 
     priority: 85,
     recommended: false,
     lowQuality: false,
     description: 'GPT-4o - Optimized for speed, reliability, and cost-effectiveness'
   },
   'gpt-4-turbo': { 
-    tier: 'premium', 
+    tier: 'free', 
     priority: 85,
     recommended: false,
     lowQuality: false,
     description: 'GPT-4 Turbo - OpenAI\'s powerful model with a great balance of performance and cost'
   },
   'gpt-4': { 
-    tier: 'premium', 
+    tier: 'free', 
     priority: 80,
     recommended: false,
     lowQuality: false,
@@ -269,14 +269,14 @@ export const useModelSelection = () => {
       models = [
         { 
           id: DEFAULT_FREE_MODEL_ID, 
-          label: 'DeepSeek', 
+          label: 'gpt-4.1-mini', 
           requiresSubscription: false,
           description: MODELS[DEFAULT_FREE_MODEL_ID]?.description || MODEL_TIERS.free.baseDescription,
           priority: MODELS[DEFAULT_FREE_MODEL_ID]?.priority || 50
         },
         { 
           id: DEFAULT_PREMIUM_MODEL_ID, 
-          label: 'Claude Sonnet 4', 
+          label: 'gpt-4.1-mini', 
           requiresSubscription: true, 
           description: MODELS[DEFAULT_PREMIUM_MODEL_ID]?.description || MODEL_TIERS.premium.baseDescription,
           priority: MODELS[DEFAULT_PREMIUM_MODEL_ID]?.priority || 100
